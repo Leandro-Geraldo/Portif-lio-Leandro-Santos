@@ -1,0 +1,260 @@
+html{
+    font-size: 62.5%;
+    font-family: 'VT323', monospace;
+}
+
+body{
+    background-image: url(../img/lightbg.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    height: 100vh;
+    
+    font-size: 1.6rem;
+    position: relative;
+    transition: .3s;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.bi{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.bi-moon{
+    display: none;
+}
+
+.dark,
+.dark .cabecalho .logo,
+.dark .cabecalho .menu li a{
+    background-image: url(../img/nightbg.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    color: #fff;
+}
+
+.dark .bi-sun{
+    display: none;
+}
+
+.dark .bi-moon{
+    display: block;
+}
+
+.dark .cabecalho .menu li a::before{
+    background-color: #fff;
+}
+
+.dark .card-conteudo .perfil .nome{
+    color: #f0802b;
+    border-bottom: 3px solid #6d6868;
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cabecalho .logo{
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+
+.cabecalho .logo span{
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.cabecalho .menu{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cabecalho .menu li a{
+    font-size: 3rem;
+    color: #000000;
+    text-transform: uppercase;
+
+    position: relative;
+    display: inline-block;
+}
+
+.cabecalho .menu li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 4px;
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale .25s;
+}
+
+.cabecalho .menu li a:hover::before{
+    scale: 1;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    max-width: 1530px;
+    height: 650px;
+    position: relative;
+    margin-top: 7rem;
+    backdrop-filter: blur(3px);
+    border-radius: 20rem 0;
+    border: 1px solid #fff;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card::after{
+    content: '';
+    opacity: .5;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 13%, rgba(233,232,232,1) 100%);
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20rem 0;
+}
+
+.card-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 7rem;
+    z-index: 1;
+}
+
+.card-conteudo .perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.perfil .imagem{
+    border-radius: 300px;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    border: 5px solid #fff;
+}
+
+.perfil .imagem img{
+    height: 300px;
+    min-width: 100%;
+    max-width: none;
+    margin: 0 -100%;
+    object-fit: cover;
+}
+
+.card-conteudo .perfil .nome{
+    font-size: 4rem;
+    font-weight: 700;
+    border-bottom: 3px solid #000000;
+    padding: 40px 0 15px;
+    color: #000000;
+}
+
+.card-conteudo .perfil .especialidade{
+    padding: 15px 0;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.perfil-imagem .links-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.perfil-imagem .links-redes a{
+    font-size: 40px;
+    color: #fff;
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.perfil-imagem .links-redes a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale .25s;
+}
+
+.perfil-imagem .links-redes a:hover::after{
+    scale: 1;
+}
+
+.conteudo-perfil .titulo{
+    font-size: 78px;
+    font-weight: 700;
+}
+
+.conteudo-perfil h2{
+    margin-top: 30px;
+    font-size: 4rem;
+}
+
+.conteudo-perfil .sobre-mim{
+    font-size: 3rem;
+    margin: 30px 0;
+}
+
+.btn{
+    font-size: 2rem;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
