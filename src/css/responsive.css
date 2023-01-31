@@ -1,6 +1,14 @@
 @media(max-width: 600px){
+    .cabecalho{
+        padding: 5px;
+    }
+
+    .perfil-imagem .links-redes{
+        margin-top: 10px;
+    }
+
     .card{
-        width: 80%;
+        width: 95%;
     }
 
     .card-conteudo{
@@ -22,8 +30,16 @@
         color: #6d6868;
     }
 
+    .sobre-mim{
+        text-align: start;
+    }
+
     .btn{
         margin: 15px 0;
+    }
+
+    .logo{
+        font-size: 30px;
     }
 }
 
