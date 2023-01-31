@@ -1,6 +1,6 @@
 html{
     font-size: 62.5%;
-    font-family: 'VT323', monospace;
+    font-family: 'Itim', cursive;
 }
 
 body{
@@ -13,6 +13,8 @@ body{
     position: relative;
     transition: .3s;
 }
+
+/*DARKMODE*/
 
 input[type="checkbox"]{
     display: none;
@@ -28,14 +30,14 @@ input[type="checkbox"]{
     display: none;
 }
 
-.dark,
-.dark .cabecalho .logo,
-.dark .cabecalho .menu li a{
+.dark
+{
     background-image: url(../img/nightbg.svg);
     background-size: cover;
     background-repeat: repeat;
     color: #fff;
 }
+
 
 .dark .bi-sun{
     display: none;
@@ -45,8 +47,24 @@ input[type="checkbox"]{
     display: block;
 }
 
-.dark .cabecalho .menu li a::before{
-    background-color: #fff;
+.dark .cabecalho .logo{
+    color: #e7e7e7e7;
+}
+
+.dark #btn-mobile{
+    color: #fff;
+}
+
+.dark .cabecalho .menu a{
+    color: #fff;
+}
+
+.dark .cabecalho .menu a::before{
+    background: #fff;
+}
+
+.dark .nav.active .menu{
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .dark .card-conteudo .perfil .nome{
@@ -54,42 +72,57 @@ input[type="checkbox"]{
     border-bottom: 3px solid #6d6868;
 }
 
+.dark .btn{
+    background: #e7e7e7;
+    border: 1px solid #e7e7e7;
+    color: #000000;
+}
+
+.dark .btn:hover{
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+
+
+
+/*CABECALHO*/
+
+.logo{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
 .cabecalho{
-    display: flex;
+    height: 70px;
+    padding: 3rem;
+    display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-.cabecalho .logo{
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #000000;
-}
-
-
-.cabecalho .logo span{
-    font-weight: 200;
-    text-transform: uppercase;
-}
-
-.cabecalho .menu{
+.nav{
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 2rem;
 }
 
-.cabecalho .menu li a{
-    font-size: 3rem;
-    color: #000000;
-    text-transform: uppercase;
 
+.menu{
+    display: flex;
+    gap: 4rem;
+}
+
+.menu a{
+    font-size: 3rem;
+    display: block;
+    
     position: relative;
     display: inline-block;
 }
 
-.cabecalho .menu li a::before{
+.cabecalho .menu a::before{
     content: '';
     position: absolute;
     left: 0;
@@ -103,14 +136,20 @@ input[type="checkbox"]{
     transition: scale .25s;
 }
 
-.cabecalho .menu li a:hover::before{
+.cabecalho .menu a:hover::before{
     scale: 1;
 }
+
+#btn-mobile{
+    display: none;
+}
+
+/*CONTEUDO*/
 
 .main{
     display: flex;
     justify-content: center;
-    
+    height: 100vh;
 }
 
 .card{
@@ -179,7 +218,7 @@ input[type="checkbox"]{
     font-weight: 700;
     border-bottom: 3px solid #000000;
     padding: 40px 0 15px;
-    color: #000000;
+    color: #f0802b;
 }
 
 .card-conteudo .perfil .especialidade{
@@ -234,27 +273,51 @@ input[type="checkbox"]{
 .conteudo-perfil h2{
     margin-top: 30px;
     font-size: 4rem;
+    color: #e7e7e7;
 }
 
 .conteudo-perfil .sobre-mim{
     font-size: 3rem;
-    margin: 30px 0;
+    margin: 25px 0;
+}
+
+.conteudo-perfil .sobre-mim span{
+    color: #f16a03;
 }
 
 .btn{
     font-size: 2rem;
     padding: 10px 30px;
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 50px;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     font-weight: 700;
+    margin: 0 30px 0 0;
     text-transform: uppercase;
-    color: #000000;
+    color: #fff;
     transition: .3s ease-in-out;
 }
 
 .btn:hover{
-    background-color: #000000;
-    border: 1px solid #000000;
-    color: #ffffff;
+    background-color: #e7e7e7;
+    border: 1px solid #e7e7e7;
+    color: #000000;
+}
+
+/*PROJETOS*/
+
+.projetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 50px;
+}
+
+.demo{
+    display: none;
+}
+
+.demo.active{
+    display: block;
 }
