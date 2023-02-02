@@ -1,53 +1,168 @@
-@media(max-width: 600px){
+
+
+@media(max-width: 600px) {
     .cabecalho{
-        padding: 5px;
+        padding: 15px;
     }
-
-    .perfil-imagem .links-redes{
-        margin-top: 10px;
+    
+    .cabecalho .logo{
+        font-size: 2rem;
     }
-
-    .card{
-        width: 95%;
+    
+    .card {
+        backdrop-filter: blur(2px);
+        box-shadow: none;
     }
-
+    
+    .card::after {
+        display: none;
+    }
     .card-conteudo{
-        flex-wrap: wrap;
         padding: 30px;
     }
+    
+    .card-conteudo .perfil-imagem {
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .perfil {
+        width: 300px;
+    }
+    
+    .perfil p {
+        font-size: 2rem;
+    }
+    
+    .perfil .nome {
+        width: 300px;
+        font-size: 3rem;
+        padding: 30px 0px;
+    }
+    
+    .perfil .especialidade{
+        font-size: 2rem;
+        padding: 30px 0px;
+    }
+    .perfil-imagem .links-redes{
+        display: flex;
+    }
+    
+    .imagem img{
+        width: 250px;
+    }
+    
+    /*SOBRE MIM*/
+    
+    .sobre-mim{
+        width: 300px;
+        height: 100vh;
+        text-align: center;
+        margin: 50px auto;
+    }
+    
+    .sobre-mim .titulo-sobre{
+        font-size: 2.5rem;
+    }
+    
+    .sobre-mim .sobre{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .sobre-mim .imagem-sobre img{
+        width: 300px;
+    }
+    
+    .sobre-mim .conteudo .texto{
+        max-height: 400px;
+        overflow: auto;
+    }
+    
+    /*PROJETOS*/
+    
+    
+    .introducao-projetos{
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .introducao-projetos h2{
+        font-size: 3rem;
+    }
+    
+    .introducao-projetos h3{
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
 
-    .conteudo-perfil{
+    .acesso-link{
+        gap: 5rem;
+    }
+
+    .projeto img{
+        width: 300px;
+    }
+    
+    /*HABILIDADES*/
+    .container-habilidades{
+        margin-top: 70rem;
         text-align: center;
     }
 
-    .conteudo-perfil .titulo{
-        font-size: 40px;
-        margin-top: 10rem;
+    .container-habilidades .habilidades{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .container-habilidades h2{
+        font-size: 3rem;
+    }
+    .container-habilidades h3{
+        font-size: 2rem;
     }
 
-    .conteudo-perfil h2{
-        font-size: 35px;
-        color: #6d6868;
+    /*FOOTER*/
+
+    .container-footer{
+        margin-top: 30rem;
+        max-width: 100%;
+    }
+    .container-footer .conteudo{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        text-align: center;
+        background-color: #000000;
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 400px){
+    .card{
+        margin-top: 15rem;
+
     }
 
     .sobre-mim{
-        text-align: start;
+        padding: 60rem 0px 40rem;
     }
 
-    .btn{
-        margin: 15px 0;
-    }
-
-    .logo{
-        font-size: 30px;
+    .container-habilidades{
+        margin-top: 80rem;
     }
 }
 
 
 
 /*MENU MOBILE*/
-@media(max-width:600px){
-    .menu{
+@media(max-width:600px) {
+    .menu {
         display: block;
         position: absolute;
         width: 60%;
@@ -61,19 +176,20 @@
         visibility: hidden;
         overflow-y: hidden;
     }
-    
-    .nav.active .menu{
+
+    .nav.active .menu {
         height: calc(50vh - 70px);
         visibility: visible;
         overflow-y: auto;
     }
-    
-    .menu a{
+
+    .menu a {
         padding: 1rem 0;
         margin: 0 3rem;
         border-bottom: 2px solid rgba(0, 0, 0, 0.05);
     }
-    #btn-mobile{
+
+    #btn-mobile {
         display: flex;
         padding: .5rem 1rem;
         border: none;
@@ -81,12 +197,13 @@
         cursor: pointer;
     }
 
-    .hamburguer{
+    .hamburguer {
         width: 20px;
         border-top: 2px solid;
     }
 
-    .hamburguer::after, .hamburguer::before{
+    .hamburguer::after,
+    .hamburguer::before {
         content: '';
         display: block;
         width: 20px;
@@ -97,15 +214,15 @@
         position: relative;
     }
 
-    .nav.active .hamburguer{
-        border-top-color:transparent ;
+    .nav.active .hamburguer {
+        border-top-color: transparent;
     }
 
-    .nav.active .hamburguer::before{
+    .nav.active .hamburguer::before {
         transform: rotate(135deg);
     }
 
-    .nav.active .hamburguer::after{
+    .nav.active .hamburguer::after {
         transform: rotate(-135deg);
         top: -7px;
     }
