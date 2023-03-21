@@ -9,17 +9,18 @@
 
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/variable.css">
     <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c17eeda3ec.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="cabecalho">
-        <h1 class="logo">Leandro Santos</h1>
+        <h1 class="logo">Leo<span>GS</span></h1>
 
         <nav class="nav">
             <button id="btn-mobile" aria-controls="menu" aria-haspopup="true" aria-label="Abri Menu"
@@ -44,14 +45,14 @@
         </nav>
     </header>
 
-    <main class="main" id="inicio">
-        <section class="card">
-            <div class="card-conteudo">
-                <div class="perfil-imagem">
-                    <div class="perfil">
+    <main class="main">
+        <section class="container-inicio" id="inicio">
+                <div class="perfil">
+                    <div class="conteudo-perfil">
                         <p>Olá,</p>
                         <h2 class="nome">Sou o <span>Leandro Geraldo dos Santos</span></h2>
                         <h3 class="especialidade">Desenvolvedor web</h3>
+
                         <div class="links-redes">
                             <a target="_blank" href="https://www.linkedin.com/in/leandro-santos97/"><i
                                     class="fa-brands fa-linkedin-in"></i></a>
@@ -65,122 +66,127 @@
                         <img src="src/img/atavar_1.png" alt="imagem-perfil">
                     </div>
                 </div>
-            </div>
         </section>
 
+        <section class="sobre-mim" id="sobre">
+            <h1 class="titulo-sobre">Sobre mim</h1>
+
+            <div class="sobre">
+                <div class="imagem-sobre">
+                    <img src="src/img/fotinha.png" alt="minha foto">
+                </div>
+                <div class="conteudo">
+                    <p class="texto">
+                        Apaixonado por tecnologia e jogos, despertou em mim no ano de 2022 uma curiosidade em como
+                        funciona
+                        as tecnologias e como são criadas, dai veio o interesse em aprender programação e mais sobre
+                        esse
+                        mundo, dês de então venho me aprimorando é desenvolvendo em tecnologias frontend, com o intuito
+                        de
+                        iniciar uma carreira na área de desenvolvimento. É como li a algum tempo, <span>"Quanto mais
+                            conhecimento se tem, mais se percebe o quanto ainda tem de saber"</span>.
+                    </p>
+                    <button class="btn">Veja meu CV</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="container-projetos" id="projetos">
+            <div class="introducao-projetos">
+                <h2>Projetos</h2>
+                <h3>Conheça alguns dos meus trabalhos de estudos</h3>
+            </div>
+            <div class="projetos">
+                <div class="projeto">
+                    <img src="src/img/projeto1.jpeg" alt="projeto do mario">
+                    <div class="acesso-link">
+                        <a target="_blank" href="https://leandro-geraldo.github.io/Projeto-Mario/">Ver Projeto</a>
+                        <a target="_blank" href="https://github.com/Leandro-Geraldo/Projeto-Mario">Repositorio</a>
+                    </div>
+                </div>
+                <div class="projeto">
+                    <img src="src/img/projeto2.jpeg" alt="projeto de gerador de conselhos">
+                    <div class="acesso-link">
+                        <a target="_blank" href="https://leandro-geraldo.github.io/Advice-Generator/">Ver Projeto</a>
+                        <a target="_blank" href="https://github.com/Leandro-Geraldo/Advice-Generator">Repositorio</a>
+                    </div>
+                </div>
+                <div class="projeto">
+                    <img src="src/img/projeto3.jpeg" alt="projeto validação de formulario">
+                    <div class="acesso-link">
+                        <a target="_blank" href="https://leandro-geraldo.github.io/formulario-com-validacao/">Ver
+                            Projeto</a>
+                        <a target="_blank"
+                            href="https://github.com/Leandro-Geraldo/formulario-com-validacao ">Repositorio</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="container-habilidades" id="habilidades">
+            <h2>Tecnologias</h2>
+            <h3>Estas são as tecnologias com qual trabalho</h3>
+            <div class="habilidades">
+                <div class="habilidade ativo html" id="html">
+                    <img src="src/img/html5.svg" alt="icone html5">
+                    <h4>html</h4>
+                    <ul class="espec">
+                        <li>Layout</li>
+                        <li>Formulários</li>
+                        <li>Validações</li>
+                        <li>SEO básico</li>
+                    </ul>
+                </div>
+                <div class="habilidade css" id="css">
+                    <img src="src/img/css3.svg" alt="icone css3">
+                    <h4>css</h4>
+                    <ul class="espec">
+                        <li>CSS Avançado</li>
+                        <li>Design Web Responsivo</li>
+                        <li>Media Queries</li>
+                    </ul>
+                </div>
+                <div class="habilidade js" id="js">
+                    <img src="src/img/javascript.svg" alt="icone javascript">
+                    <h4>javaScript</h4>
+                    <ul class="espec">
+                        <li>Tipos de variáveis</li>
+                        <li>Loops</li>
+                        <li>Funções</li>
+                        <li>Objetos</li>
+                        <li>Arrays</li>
+                        <li>Template Strings</li>
+                        <li>Callbacks e Promises</li>
+                        <li>Funções Assíncronas</li>
+                        <li>APIs | fetch</li>
+                    </ul>
+                </div>
+                <div class="habilidade git" id="git">
+                    <img src="src/img/git.svg" alt="icone git">
+                    <h4>git</h4>
+                    <ul class="espec">
+                        <li>Versionamento</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
-    <section class="sobre-mim" id="sobre">
-        <h1 class="titulo-sobre">Sobre mim</h1>
-
-        <div class="sobre">
-            <div class="imagem-sobre">
-                <img src="src/img/fotinha.png" alt="minha foto">
-            </div>
-            <div class="conteudo">
-                <p class="texto">
-                    Apaixonado por tecnologia e jogos, despertou em mim no ano de 2022 uma curiosidade em como funciona
-                    as tecnologias e como são criadas, dai veio o interesse em aprender programação e mais sobre esse
-                    mundo, dês de então venho me aprimorando é desenvolvendo em tecnologias frontend, com o intuito de
-                    iniciar uma carreira na área de desenvolvimento. É como li a algum tempo, <span>"Quanto mais
-                        conhecimento se tem, mais se percebe o quanto ainda tem de saber"</span>.
-                </p>
-                <button class="btn">Veja meu CV</button>
-            </div>
-        </div>
-
-    </section>
-    <section class="container-projetos" id="projetos">
-        <div class="introducao-projetos">
-            <h2>Projetos</h2>
-            <h3>Conheça alguns dos meus trabalhos de estudos</h3>
-        </div>
-        <div class="projetos">
-            <div class="projeto">
-                <img src="src/img/projeto1.jpeg" alt="projeto do mario">
-                <div class="acesso-link">
-                    <a target="_blank" href="https://leandro-geraldo.github.io/Projeto-Mario/">Deploy</a>
-                    <a target="_blank" href="https://github.com/Leandro-Geraldo/Projeto-Mario">Repositorio</a>
-                </div>
-            </div>
-            <div class="projeto">
-                <img src="src/img/projeto2.jpeg" alt="projeto de gerador de conselhos">
-                <div class="acesso-link">
-                    <a target="_blank" href="https://leandro-geraldo.github.io/Advice-Generator/">Deploy</a>
-                    <a target="_blank" href="https://github.com/Leandro-Geraldo/Advice-Generator">Repositorio</a>
-                </div>
-            </div>
-            <div class="projeto">
-                <img src="src/img/projeto3.jpeg" alt="projeto validação de formulario">
-                <div class="acesso-link">
-                    <a target="_blank" href="https://leandro-geraldo.github.io/formulario-com-validacao/">Deploy</a>
-                    <a target="_blank"
-                        href="https://github.com/Leandro-Geraldo/formulario-com-validacao ">Repositorio</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section class="container-habilidades" id="habilidades">
-        <h2>Tecnologias</h2>
-        <h3>Estas são as tecnologias com qual trabalho</h3>
-        <div class="habilidades">
-            <div class="habilidade html">
-                <img src="src/img/html5.svg" alt="icone html5">
-                <h4>html</h4>
-                <ul>
-                    <li>Layout</li>
-                    <li>Formulários</li>
-                    <li>Validações</li>
-                    <li>SEO básico</li>
-                </ul>
-            </div>
-            <div class="habilidade css">
-                <img src="src/img/css3.svg" alt="icone css3">
-                <h4>css</h4>
-                <ul>
-                    <li>CSS Avançado</li>
-                    <li>Design Web Responsivo</li>
-                    <li>Media Queries</li>
-                </ul>
-            </div>
-            <div class="habilidade js">
-                <img src="src/img/javascript.svg" alt="icone javascript">
-                <h4>javaScript</h4>
-                <ul>
-                    <li>Tipos de variáveis</li>
-                    <li>Loops</li>
-                    <li>Funções</li>
-                    <li>Objetos</li>
-                    <li>Arrays</li>
-                    <li>Template Strings</li>
-                    <li>Callbacks e Promises</li>
-                    <li>Funções Assíncronas</li>
-                    <li>APIs | fetch</li>
-                </ul>
-            </div>
-            <div class="habilidade git">
-                <img src="src/img/git.svg" alt="icone git">
-                <h4>git</h4>
-                <ul>
-                    <li>Versionamento</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container-footer">
             <div class="conteudo">
                 <img src="src/img/atavar_1.png" alt="">
                 <p>Desenvolvido com muito carinho por <span>Leandro Geraldo dos Santos</span>.</p>
                 <div class="redes-footer">
                     <a target="_blank" href="https://www.linkedin.com/in/leandro-santos97/"><i
-                    class="fa-brands fa-linkedin-in"></i></a>
-                    <a target="_blank" href="https://github.com/Leandro-Geraldo "><i class="fa-brands fa-github"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/lelebkg/?hl=pt-br"><i class="fa-brands fa-instagram"></i></a>
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://github.com/Leandro-Geraldo "><i
+                            class="fa-brands fa-github"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/lelebkg/?hl=pt-br"><i
+                            class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="src/js/menumobile.js"></script>
     <script src="src/js/darkmode.js"></script>

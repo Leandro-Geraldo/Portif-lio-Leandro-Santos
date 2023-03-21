@@ -1,15 +1,16 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;700&display=swap');
+html {
     font-size: 62.5%;
     font-family: 'Unbounded', cursive;
-    scroll-behavior: smooth;
+    font-family: 'JetBrains Mono', monospace;
 }
 
-body{
+body {
     background-image: url(../img/lightbg.svg);
     background-size: cover;
     background-repeat: repeat;
     height: 100vh;
-    
+
     font-size: 1.6rem;
     position: relative;
     transition: .3s;
@@ -17,90 +18,100 @@ body{
 
 /*DARKMODE*/
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     display: none;
 }
 
-.bi{
+.bi {
     font-size: 2rem;
     cursor: pointer;
 }
 
 
-.bi-moon{
+.bi-moon {
     display: none;
 }
 
-.dark
-{
+.dark {
     background-image: url(../img/nightbg.svg);
     background-size: cover;
     background-repeat: repeat;
-    color: #fff;
+    color: var(--white-color);
 }
 
 
-.dark .bi-sun{
+.dark .bi-sun {
     display: none;
 }
 
-.dark .bi-moon{
+.dark .bi-moon {
     display: block;
 }
 
-.dark .cabecalho .logo{
+.dark .cabecalho .logo {
     color: #e7e7e7e7;
 }
 
+.dark .acesso-link a,
 .dark .perfil .especialidade,
 .dark #btn-mobile,
 .dark .perfil-imagem .links-redes a,
-.dark .cabecalho .menu a{
-    color: #fff;
-}
-.dark .imagem img{
-    border: 10px solid #ffffff;
+.dark .cabecalho .menu a {
+    color: var(--white-color);
 }
 
-.dark .cabecalho .menu a::before{
-    background: #fff;
+.dark .imagem img {
+    border: 10px solid var(--white-color);
 }
 
-.dark .nav.active .menu{
+.dark .cabecalho .menu a::before {
+    background: var(--white-color);
+}
+
+.dark .nav.active .menu {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.dark .card-conteudo .perfil .nome{
+.dark .card-conteudo .perfil .nome {
     border-bottom: 3px solid #6d6868;
 }
 
-.dark .btn{
+.dark .btn {
     background: #e7e7e7;
     border: 1px solid #e7e7e7;
     color: #000000;
 }
 
-.dark .btn:hover{
-    background-color: #000000;
-    border: 1px solid #000000;
-    color: #ffffff;
+.dark .btn:hover {
+    background-color: var(--black-color);
+    border: 1px solid var(--black-color);
+    color: var(--white-color);
 }
 
 
 
 /*CABECALHO*/
 
-.logo{
+.logo {
     font-size: 3.5rem;
+    text-transform: uppercase;
     font-weight: bold;
+    font-family: 'Inter', sans-serif;
 }
 
-.cabecalho{
+.logo span{
+    font-weight: 100;
+}
+
+.cabecalho {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     position: fixed;
-    width: 100%;
     height: 70px;
     padding: 3rem;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
@@ -108,124 +119,98 @@ input[type="checkbox"]{
     z-index: 100;
 }
 
-.nav{
+.nav {
     display: flex;
     align-items: center;
     gap: 3rem;
 }
 
 
-.menu{
+.menu {
     display: flex;
     gap: 4rem;
 }
 
-.menu a{
+.menu a {
     font-size: 2rem;
     display: block;
-    
+
     position: relative;
     display: inline-block;
 }
 
-.cabecalho .menu a::before{
+.cabecalho .menu a::before {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: #000000;
+    background-color: var(--black-color);
     border-radius: 4px;
     scale: 0 1;
     transform-origin: left;
     transition: scale .25s;
 }
 
-.cabecalho .menu a:hover::before{
+.cabecalho .menu a:hover::before {
     scale: 1;
 }
 
-#btn-mobile{
+#btn-mobile {
     display: none;
 }
 
 /*CONTEUDO*/
 
-.main{
+.main {
+    width: var(--max-width);
+    margin: 0 auto;
+}
+
+.container-inicio {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: calc(100vh - 70px);
-}
-
-.card{
-    display: flex;
     justify-content: center;
-    max-width: 1440px;
-    height: 650px;
-    position: relative;
-    backdrop-filter: blur(3px);
-    border-radius: 20rem 0;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.4);
+    height: 100vh;
 }
 
-.card::after{
-    content: '';
-    opacity: .5;
-    background: linear-gradient(90deg, rgba(231,231,231,1) 0%, rgba(65,65,65,1) 50%, rgba(0,0,0,1) 100%);
-    position:absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 20rem 0;
-}
-
-.card-conteudo{
-    padding: 7rem;
-    z-index: 1;
-}
-
-.card-conteudo .perfil-imagem{
+.perfil {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 15rem;
+    gap: 7rem;
 }
 
-.perfil{
-    padding: 20px;
-}
 
-.perfil p{
+
+.perfil p {
     font-size: 3rem;
     font-weight: 200;
 }
 
-.perfil .nome{
+.perfil .nome {
     width: 650px;
-    font-size: 5rem;
-    padding:20px 0px 50px;
-    border-bottom: 3px solid #000000;
+    font-size: 4.5rem;
+    padding: 20px 0px 50px;
+    border-bottom: 3px solid var(--black-color);
 }
 
-.perfil .nome span{
+.perfil .nome span {
     color: #f0802b;
 }
 
-.perfil .especialidade{
+.perfil .especialidade {
     padding: 50px 0;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 400;
     text-transform: uppercase;
     color: #2b1c75;
 }
 
 
-.perfil-imagem .links-redes a{
+.links-redes a {
     font-size: 40px;
-    color: #ffffff;
+    color: var(--white-color);
     background: #f16a03;
     padding: 0px 10px;
     position: relative;
@@ -236,48 +221,46 @@ input[type="checkbox"]{
     transform: scale(.8);
 }
 
-.perfil-imagem .links-redes a:hover{
+.links-redes a:hover {
     transform: scale(1.1);
     color: #2b1c75;
 }
 
-.perfil-imagem .links-redes a:hover .fa-instagram{
+.links-redes a:hover .fa-instagram {
     color: #af21f1
 }
 
-.perfil-imagem .links-redes a:hover .fa-github{
-    color: #000000;
+.links-redes a:hover .fa-github {
+    color: var(--black-color);
 }
 
-
-.imagem img{
+.imagem img {
+    width: 40rem;
     object-fit: cover;
     border: 10px solid #af21f1;
     border-radius: 100%;
 }
 
-.btn{
+.btn {
     font-size: 2rem;
     padding: 10px 30px;
-    background-color: #000000;
+    background-color: var(--black-color);
     border-radius: 50px;
-    border: 1px solid #000000;
+    border: 1px solid var(--black-color);
     font-weight: 700;
-    color: #fff;
+    color: var(--white-color);
     transition: .3s ease-in-out;
 }
 
-.btn:hover{
-    background-color: #ffffff;
+.btn:hover {
+    background-color: var(--white-color);
     border: 1px solid #f0802b;
     color: #000000;
 }
 
 /*SOBRE MIM*/
 
-.sobre-mim{
-    width: 1440px;
-    margin: 0 auto;
+.sobre-mim {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -285,42 +268,42 @@ input[type="checkbox"]{
     justify-content: center;
 }
 
-.sobre-mim .titulo-sobre{
-    font-size: 5rem;
+.sobre-mim .titulo-sobre {
+    font-size: var(--font-title-size);
     margin-bottom: 5rem;
     text-decoration: underline 5px;
 }
 
-.sobre-mim .sobre{
-    flex-wrap: wrap;
+.sobre-mim .sobre {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10rem;
 }
 
-.sobre-mim .imagem-sobre img{
-    width: 460px;
+.sobre-mim .imagem-sobre img {
+    width: 100%;
 }
 
-.sobre-mim .conteudo{
+.sobre-mim .conteudo {
     padding: 30px 0px;
 }
 
-.sobre-mim .conteudo .texto{
+.sobre-mim .conteudo .texto {
     font-size: 1.8rem;
     line-height: 1.5;
     margin-bottom: 30px;
     max-width: 600px;
 }
 
-.sobre-mim .conteudo .texto span{
+.sobre-mim .conteudo .texto span {
     color: #f16a03;
 }
 
 /*PROJETOS*/
 
-.container-projetos{
+.container-projetos {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -330,26 +313,25 @@ input[type="checkbox"]{
     padding-top: 10rem;
 }
 
-.introducao-projetos{
+.introducao-projetos {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
 }
 
-.introducao-projetos h2{
-    font-size: 5rem;
+.introducao-projetos h2 {
+    font-size: var(--font-title-size);
     font-weight: 700;
-    text-transform: uppercase ;
 }
 
-.introducao-projetos h3{
-    font-size: 3rem;
+.introducao-projetos h3 {
+    font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 30px;
 }
 
-.projetos{
+.projetos {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -358,17 +340,16 @@ input[type="checkbox"]{
     gap: 5rem;
 }
 
-.projeto{
+.projeto {
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: -.5px 5px 5px #21f158;
     height: 300px
-    
 }
 
-.acesso-link{
+.acesso-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -376,17 +357,17 @@ input[type="checkbox"]{
     gap: 10rem;
 }
 
-.acesso-link a{
+.acesso-link a {
     font-size: 1.8rem;
-    color: #000000;
+    color: var(--black-color);
     transition: .3s;
 }
 
-.acesso-link a:hover{
+.acesso-link a:hover {
     transform: scale(1.1);
 }
 
-.projeto img{
+.projeto img {
     width: 360px;
     height: 270px;
     border-radius: 10px;
@@ -394,125 +375,132 @@ input[type="checkbox"]{
     transform: scale(1);
 }
 
-.projeto img:hover{
+.projeto img:hover {
     transform: scale(1.05);
 }
 
 /*HABILIDADES*/
 
-.container-habilidades{
+.container-habilidades {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 80vh;
-    max-width: 1440px;
-    margin: 0 auto;
     gap: 5rem;
 }
 
-.container-habilidades h2{
-    font-size: 5rem;
+.container-habilidades h2 {
+    font-size: var(--font-title-size);
     font-weight: 700;
 }
 
-.container-habilidades h3{
+.container-habilidades h3 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
 
-.habilidades{
+.habilidades {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+    height: 40vh;
     gap: 5rem;
 }
 
-.habilidade{
+.habilidade {
+    flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     width: 260px;
-    border-radius:15px ;
+    padding: 30px;
+    border-radius: 15px;
     transition: .3s;
 }
 
-.habilidade:hover{
+.habilidade:hover {
     transform: scale(1.03);
 }
 
-.habilidade h4{
+.habilidade h4 {
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.habilidade ul{
+.habilidade .espec {
     padding: 15px;
+    height: 0px;
+    transition: 0.6s;
+    visibility: hidden;
+    overflow-y: hidden;
 }
 
-.habilidade ul li{
+.habilidade.ativo:hover .espec {
+    height: calc(22vh);
+    visibility: visible;
+    overflow-y: auto;
+}
+
+.habilidade .espec li {
     font-size: 1.5rem;
     list-style: square;
     text-align: start;
 }
 
-.habilidade.html{
+.habilidade.html {
     box-shadow: -.5px 5px 5px #f97316;
 }
 
-.habilidade.css{
+.habilidade.css {
     box-shadow: -.5px 5px 5px #1d4ed8;
 }
 
-.habilidade.js{
+.habilidade.js {
     box-shadow: -.5px 5px 5px #eab308;
 }
 
-.habilidade.git{
+.habilidade.git {
     box-shadow: -.5px 5px 5px #ef4444;
 }
 
-.habilidade img{
+.habilidade img {
     width: 80px;
     height: 80px;
 }
 
 /*footer*/
 
-.footer{
+.footer {
     width: 100%;
     height: 20vh;
-    background: #000000;
+    background: var(--black-color);
 }
 
-.container-footer{
-    width: 1440px;
-    margin: 0 auto;
-}
-
-.container-footer .conteudo{
+.container-footer .conteudo {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.container-footer .conteudo p{
+.container-footer .conteudo p {
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--white-color);
     letter-spacing: 1px;
 }
 
-.container-footer .conteudo p span{
+.container-footer .conteudo p span {
     color: #f0802b;
 }
 
-.container-footer img{
+.container-footer img {
     width: 185px;
 }
 
-.redes-footer a{
-    color: #ffffff;
+.redes-footer a {
+    color: var(--white-color);
     font-size: 3rem;
     padding: 15px;
 }
